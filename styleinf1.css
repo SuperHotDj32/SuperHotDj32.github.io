@@ -1,0 +1,178 @@
+html, body, #map {
+    padding:0;
+    margin:0;
+    height:100%;
+  }
+  #BasemapToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+  }
+  #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: url(final.jpg) no-repeat;
+  height: calc(60vh - 60px);
+  background-size: cover;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+
+}
+img.logo{
+  margin-top: 50px;
+  line-height: 80px;
+  padding: 0 60px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+nav ul li a{
+color: rgb(255, 255, 255);
+font-size: 17px;
+padding: 7px 13px;
+border-radius: 3px;
+text-transform: uppercase;
+}
+a.perigrafhist,a:hover{
+background: #1b9bff;
+transition: .5s;
+}
+h1{
+text-align: center;
+color: black;
+margin-top: 20px;
+font-size: 27px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h2{
+text-align: center;
+color: rgba(255, 255, 255, 0.719);
+margin-top: 20px;
+border: 10px solid transparent;
+
+}
+h3{
+text-align: center;
+color: black;
+}
+#copyright{
+text-align: center;
+color: rgb(255, 255, 255);
+}
+.wra{
+color: black;
+margin-top: 10px;
+text-align: center;
+font-size: 18px;
+}
+
+p{
+text-align: center;
+color: black;
+margin-top: 20px;
+margin-left: 300px;
+margin-right: 300px;
+border: 10px solid transparent;
+margin: 150px auto;
+width: 70%;
+}
+#borderimg { 
+border: 10px solid transparent;
+padding: 15px;
+border-image: url(DSC09942.jpg) 30 stretch;
+
+}
+.troumpa{
+margin-top: 20px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+.checkbtn{
+font-size: 22px;
+color: #FF8F4B;
+line-height: 80px;
+margin-right: 40px;
+cursor: pointer;
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+}
+#check{
+display: none;
+}
+@media (max-width: 1920px){
+.checkbtn {
+  display: block;
+}
+ul{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: url(cat.jpg);
+  height: calc(60vh - 60px);
+  background-size: cover;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all .6s;
+}
+nav ul li{
+  display: block;
+  margin: 50px 0;
+  line-height: 30px;
+}
+nav ul li a{
+  font-size: 20px;
+}
+a:hover,a.perigrafhist{
+  background: none;
+  color: #FF8F4B;
+}
+#check:checked ~ ul{
+left: 0;
+}
+}
+section{
+background: url(sailboats-in-the-port-of-pireaus-3386326929.jpg) no-repeat;
+background-size: cover;
+height: calc(60vh - 60px);
+margin-bottom: 10px;
+
+}
+#grad1 {
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0.432), rgba(94, 10, 204, 0.705), rgba(0, 140, 255, 0.692), rgba(0, 0, 0, 0.432));
+}
+@media only screen and (max-width: 768px) {
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+}
