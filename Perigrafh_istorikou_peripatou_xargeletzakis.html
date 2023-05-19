@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>AL Informations</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/3.43/esri/css/esri.css">
+  <script src="https://kit.fontawesome.com/a1d2679d39.js" crossorigin="anonymous"></script>
+  <style>
+    html, body, #map {
+      padding:0;
+      margin:0;
+      height:100%;
+    }
+    #BasemapToggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+    #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+      *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+}
+nav{
+    background: url(final.jpg) no-repeat;
+    height: calc(60vh - 60px);
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+}
+img.logo{
+    line-height: 80px;
+    padding: 0 60px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.perigrafhist,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+h1{
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+  font-size: 27px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h2{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.719);
+  margin-top: 20px;
+  border: 10px solid transparent;
+
+}
+h3{
+  text-align: center;
+  color: black;
+}
+#copyright{
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.wra{
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+p{
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 10px solid transparent;
+  margin: 150px auto;
+  width: 70%;
+}
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(DSC09942.jpg) 30 stretch;
+  
+}
+.troumpa{
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.checkbtn{
+  font-size: 22px;
+  color: #FF8F4B;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1920px){
+  .checkbtn {
+    display: block;
+  }
+  ul{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: url(cat.jpg);
+    height: calc(60vh - 60px);
+    background-size: cover;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .6s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.perigrafhist{
+    background: none;
+    color: #FF8F4B;
+  }
+#check:checked ~ ul{
+  left: 0;
+}
+}
+section{
+  background: url(sailboats-in-the-port-of-pireaus-3386326929.jpg) no-repeat;
+  background-size: cover;
+  height: calc(60vh - 60px);
+  margin-bottom: 10px;
+  
+}
+#grad1 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.432), rgba(94, 10, 204, 0.705), rgba(0, 140, 255, 0.692), rgba(0, 0, 0, 0.432));
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css" />
+
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class='fas fa-align-justify'></i>
+
+    </label>
+    <a href="https://lizosanastasios.wordpress.com" target="_blank"> <img class="logo" src="" ></a>
+    <ul>
+      <li><a class="perigrafhist" href="index.html">Home</a></li>
+      <li><a href="Perigrafh_istorikou_peripatou_xargeletzakis.html">Περιγραφή Ιστορικού Περιπάτου</a></li>
+      <li><a href="Politikes_diadromes_peiraia.html">Πολιτικές Διαδρομές Πειραιά</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="grad1">
+   <section>
+
+   </section>
+
+  <h1>Περιγραφή Ιστορικού Περιπάτου Χεργκελετζάκης</h1> 
+  <h2>Τρούμπα</h2> 
+  <img src="trouba.jpg" class="troumpa">
+  <p>Η Τρούμπα ήταν η πιο κακόφημη συνοικία του Πειραιά, επί σειρά ετών, καθώς ήταν γνωστή για τους οίκους ανοχής και τα καμπαρέ που διέθετε. <br><br>
+    Η περιοχή πήρε το όνομά της από την αντλία (τρόμπα) που ήταν τοποθετημένη από το 1860 σε πηγάδι, στην περιοχή αυτή, στην αρχή της οδού Αιγέως, (σημερινής 2ας Μεραρχίας) στον Πειραιά και εφοδίαζε με νερό τα πλοία.
+    Η Τρούμπα ήταν στις δόξες της τη δεκαετία του ’50 – ’60 και η «χρυσή εποχή» της κράτησε περίπου 20 χρόνια, ενώ στους δρόμους της βρίσκονταν τα πιο διάσημα «κακόφημα» καμπαρέ που άφησαν εποχή, όπως το «Τζων Μπουλ» και το «Μπλακ Κατ» που με στριπτιζ και κονσομασιόν προσπαθούσαν να ικανοποιήσουν τους απαιτητικούς πελάτες.<br>
+     Παράλληλα στην Τρούμπα μεγαλούργησαν και πολλοί γνωστοί ρεμπέτες, ο Μάρκος Βαμβακάρης ο Παπαϊωάννου, ο Κερομύτης και ο Νίκος ο Πουνέντης.  Μέρα και βράδυ από όποιο καφενείο πέρναγες, άκουγες μπουζούκι και μπαγλαμά και ένιωθες την μυρωδιά του χασίς από ναργιλέ και από τσιγαριλίκι.  Όσοι έπαιζαν μπουζούκι, συνήθως ήταν άνθρωποι της τούφας και το είχαν μάθει στη φυλακή. </p>
+  <h3>Το 1967 απαγορεύτηκαν όλες οι δραστηριότητες στην περιοχή</h3>
+  <img src="h-istoria-ths-troympas.jpg" class="troumpa">
+  <p>Το 1967 ο τότε δήμαρχος Πειραιά Αριστείδης Σκυλίτσης αποφασίζει την απαγόρευση όλων των δραστηριοτήτων στην περιοχή, αφού πέραν των συνθηκών που είχαν δημιουργήσει γκέτο για τους Πειραιώτες, η εγκατάσταση ναυτιλιακών εταιρειών στην Ακτή Μιαούλη ήταν μία καλή ευκαιρία για αναδόμηση, εκκαθάριση και ανάπτυξη της περιοχής.<br><br>
+  Μέχρι το 1970 το λιμενικό είχε πλέον τον πλήρη έλεγχο, ενώ τα περισσότερα νυχτερινά κέντρα και τα καταγώγια της εποχής κατεδαφίστηκαν.  <br>
+  Σήμερα στην περιοχή στεγάζονται το δικαστικό Μέγαρο Πειραιά και Διευθύνσεις του ΝΑΤ και του Υπουργείου Ναυτιλίας.</p>
+  <h3>Αρχαιολογικό Μουσείο του Πειραιά</h3>
+  <img src="archaiologiko-mouseio-peiraia-1.jpg" class="troumpa">
+  <p>Το Αρχαιολογικό Μουσείο του Πειραιά προσφέρει στον επισκέπτη την αντιπροσωπευτική και πλήρη εικόνα της ιστορίας της πόλης, που κατά την αρχαιότητα γνώρισε μεγάλη ακμή τόσο ως εμπορικό κέντρο της ανατολικής Μεσογείου όσο και ως πολεμικός ναύσταθμος της αρχαίας Αθήνας.<br>
+  Το είδος των εκθεμάτων του, που προέρχονται κυρίως από την ευρύτερη περιοχή του Πειραιά και της αττικής παραλίας, και τα χρονικά όρια που καλύπτουν, από τη μυκηναϊκή έως και τη ρωμαϊκή εποχή, είναι αντιπροσωπευτικά της ιδιομορφίας, της σύνθεσης του πληθυσμού και της ιστορίας του Πειραιά.<br> <br>
+   Οι συλλογές του μουσείου αποτελούνται κυρίως από ευρήματα ανασκαφών ή τυχαία ευρήματα και από παραδόσεις αρχαιοτήτων, ενώ έχουν εμπλουτισθεί και με τις δωρεές ιδιωτικών συλλογών, όπως της συλλογής Μελετοπούλου-Νομίδου και, πιο πρόσφατα, της Συλλογής Γερουλάνου. Το μουσείο στεγάζεται σε διώροφο κτήριο, που πλαισιώνει στη δυτική και νότια πλευρά το ελληνιστικό θέατρο της Ζέας και έχει συνολικό εμβαδόν 1.394 τ.μ. <br><br>
+    Οι εκθεσιακοί του χώροι καταλαμβάνουν τις δέκα αίθουσες των δύο ορόφων (1.044 τ.μ.), ενώ στο υπόγειο (350 τ.μ.) βρίσκονται τα εργαστήρια συντήρησης πήλινων, μεταλλικών και λίθινων αντικειμένων, καθώς και η αποθήκη του μουσείου, όπου φυλάσσονται αρχαιολογικά ευρήματα από την περιοχή του Πειραιά, την παραλιακή ζώνη και τα νησιά.  Το κτήριο του παλαιού μουσείου (330 τ.μ.), που βρίσκεται ακριβώς δίπλα, χρησιμοποιείται σήμερα ως αποθήκη γλυπτών, ενώ στον αρχαιολογικό χώρο του θεάτρου της Ζέας πρόκειται να λειτουργήσει υπαίθρια έκθεση γλυπτών</p>
+  
+  <h4 class="wra">Ωράρια Λειτουργείας:</h4>
+  <h5 class="wra">ΧΕΙΜΕΡΙΝΟ: 08:30-15:30 - Τρίτη κλειστά</h5>
+  <h5 class="wra">KΑΛΟΚΑΙΡΙΝΟ: 08:30-17:00 - Τρίτη κλειστά</h5>
+  <h5 class="wra">ΟΔΟΣ: ΧΑΡΙΛΑΟΥ ΤΡΙΚΟΥΠΗ 31 ΠΕΙΡΑΙΑΣ</h5>
+  <h5 class="wra">ΤΗΛΕΦΩΝΟ: 0030 2104521598</h5>
+
+    <br>  
+    <br>  
+    <br>  
+    <br> 
+  <h2>Τείχη Πειραιά</h2> 
+  <h3>Τα τείχη και οι πύλες του αρχαίου Πειραιά</h3>
+  <img src="teixhpeiraias.jpg" class="troumpa">
+
+  <p>Τα ερείπια των οχυρώσεων βρίσκονται σε καλή κατάσταση ως σήμερα.
+      Το 493 π.Χ. ο Θεμιστοκλής ξεκίνησε την κατασκευή οχυρώσεων γύρω από τον Πειραιά.
+       Οι δύο κύριες πύλες των οχυρώσεων βρίσκονται στην είσοδο της σύγχρονης πόλης στην οδό του 34ου Συντάγματος.
+       Η Πύλη του Άστεως είναι η πιο δυτική πύλη, η οποία περικλείεται από τις οδούς Πύλης, Ομηρίδου, Σκλυλίτση και Κολοκοτρώνη.
+        Ο κύριος δρόμος για τις μεταφορές προς την Αθήνα περνούσε μέσα από την Πύλη του Άστεως.</p>
+
+  <h3>Τα Μακρά Τείχη και η Μέση Πύλη</h3>
+  <img src="mesateixh.jpg" class="troumpa">
+  <p>Ο σκοπός κατασκευής των Μακρών Τειχών ήταν η σύνδεση της Αθήνας με το επίνειό της.
+     Τα Μακρά Τείχη (Βόρειο, Φαληρικό και το Μέσο ή Νότιο τείχος) δημιουργούσαν έναν ασφαλή διάδρομο ανάμεσα στην Αθήνα και τον Πειραιά για τον πληθυσμό της Αττικής κατά τον Πελοποννησιακό Πόλεμο.  <br>
+     Η Μέση Πύλη, κοντά στην Πύλη του Άστεως, είναι πολύ παρόμοια με το Δίπυλον της Αθήνας, αλλά μικρότερη.  Είχε κατασκευαστεί για διακίνηση χρησιμοποιώντας τον διάδρομο των Μακρών Τειχών. 
+     Η Ηετιώνεια Πύλη βρίσκεται στη βορεινή πλευρά του κύριου λιμένα, του Κάνθαρου, στην περιοχή της Δραπετσώνας. Το φρούριο της Ηετιωνείας κατασκευάστηκε με σκοπό τον έλεγχο του λιμανιού.  Δύο τμήματα του τείχους ξεκινούν απ’ αυτή την πύλη. <br>
+      Η πρώτη στα ανατολικά προς τον λιμένα. Η δεύτερη προς τον εξωτερικό λιμένα.  Δύο ισχυροί κυκλικοί πύργοι της ελληνιστικής περιόδου ορθώνονταν στα πλευρά της πύλης.  Το τείχος προστατεύεται από μια βαθιά τάφρο σκαμμένη μέσα στον βράχο.
+      Ο παράκτιος τομέας των οχυρώσεων.  Κατασκευάστηκε από τον Κόνωνα το 394 π.Χ. και διατηρείται, ως σήμερα, ένα τμήμα του μήκους 2,5 χλμ. κατά μήκος της Πειραϊκής Ακτής. Πολλοί από τους πύργους του τείχους διατηρούνται ως σήμερα.
+    </p>
+    <i id="copyright">Original Copyright Disclaimer By Lizos Anastasios &copy;</i>
+    </div>
+</body>
+
+</html>
